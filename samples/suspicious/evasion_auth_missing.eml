@@ -1,0 +1,13 @@
+From: account-team@unrelated.example.net
+To: analyst@example.org
+Subject: Account document available
+Date: Fri, 30 Oct 2026 10:10:00 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Your account document is available for review.
+
+Visit:
+https://login.example.test/document?case=EV003
+
+This synthetic message is intended for defensive PhishTrace testing.

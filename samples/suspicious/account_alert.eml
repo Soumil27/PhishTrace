@@ -1,0 +1,13 @@
+From: account@example.org
+Reply-To: recovery@unrelated.example.net
+To: analyst@example.org
+Subject: Account suspended - verify immediately
+Date: Fri, 30 Oct 2026 12:00:00 +0000
+Message-ID: <phish-account-001@example.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Your account may be suspended.
+Verify your details using this synthetic testing link:
+https://account.example.test/confirm?case=PT004
+This is a synthetic suspicious test email. Do not visit the link.

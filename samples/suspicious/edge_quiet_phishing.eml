@@ -1,0 +1,13 @@
+From: helpdesk@example.org
+Reply-To: account-recovery@unrelated.example.net
+To: analyst@example.org
+Subject: Document for your review
+Date: Fri, 30 Oct 2026 09:20:00 +0000
+Message-ID: <edge-phishing-quiet@example.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Please review the document using this link:
+https://login.example.test/verify?case=PTEDGE01
+
+This is a synthetic phishing test. Do not visit the URL.

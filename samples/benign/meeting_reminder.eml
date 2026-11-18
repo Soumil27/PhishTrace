@@ -1,0 +1,13 @@
+From: team@example.org
+To: analyst@example.org
+Subject: Project meeting reminder
+Date: Fri, 30 Oct 2026 09:00:00 +0000
+Message-ID: <benign-meeting-001@example.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Authentication-Results: mail.example.org; spf=pass; dkim=pass; dmarc=pass
+
+Hello,
+This is a reminder that the project meeting is scheduled for Monday.
+Please review the agenda before the meeting.
+This is a synthetic benign test email.

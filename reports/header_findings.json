@@ -1,0 +1,22 @@
+﻿{
+  "finding_count": 3,
+  "findings": [
+    {
+      "indicator": "Sender and Reply-To domains differ",
+      "severity": "medium",
+      "detail": "Sender: ['example.test']; Reply-To: ['unrelated.test']"
+    },
+    {
+      "indicator": "No Received headers",
+      "severity": "informational",
+      "detail": "No mail-server routing history is present in this file."
+    },
+    {
+      "indicator": "No Authentication-Results header",
+      "severity": "informational",
+      "detail": "SPF/DKIM/DMARC results cannot be established from this header alone."
+    }
+  ],
+  "verdict": "Needs investigation",
+  "disclaimer": "Indicators are not proof of maliciousness; investigate with additional evidence."
+}

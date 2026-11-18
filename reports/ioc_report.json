@@ -1,0 +1,12 @@
+﻿{
+  "source_file": "sample_phishing.eml",
+  "urls": [
+    "https://login.example.test/verify?case=PT001s"
+  ],
+  "domains": [
+    "login.example.test"
+  ],
+  "url_count": 1,
+  "domain_count": 1,
+  "note": "Extracted indicators are not automatically malicious."
+}

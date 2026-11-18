@@ -1,0 +1,17 @@
+﻿{
+  "authentication": {
+    "SPF": {
+      "status": "UNKNOWN",
+      "evidence": "No Authentication-Results evidence found."
+    },
+    "DKIM": {
+      "status": "UNKNOWN",
+      "evidence": "No Authentication-Results evidence found."
+    },
+    "DMARC": {
+      "status": "UNKNOWN",
+      "evidence": "No Authentication-Results evidence found."
+    }
+  },
+  "note": "These results are parsed from supplied headers; header text alone does not establish that the headers are trustworthy."
+}

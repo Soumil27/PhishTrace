@@ -1,0 +1,187 @@
+{
+  "summary": {
+    "samples_tested": 7,
+    "flagged_expected_phishing": 4,
+    "benign_not_flagged": 3,
+    "potential_false_positives": 0,
+    "potential_false_negatives": 0,
+    "inconclusive": 0,
+    "errors": 0,
+    "note": "Preliminary evaluation using synthetic samples. A suspicious verdict means further investigation is recommended, not that phishing has been conclusively established. Metrics should not be treated as real-world performance estimates."
+  },
+  "results": [
+    {
+      "file": "samples/benign/sample_benign.eml",
+      "expected": "benign",
+      "predicted": "not_flagged",
+      "verdict": "No configured indicators detected",
+      "risk_score": 0,
+      "risk_level": "Low",
+      "risk_reasons": [],
+      "outcome": "BENIGN_NOT_FLAGGED"
+    },
+    {
+      "file": "samples/suspicious/sample_phishing.eml",
+      "expected": "phishing",
+      "predicted": "flagged",
+      "verdict": "Suspicious - further investigation required",
+      "risk_score": 35,
+      "risk_level": "Medium",
+      "risk_reasons": [
+        {
+          "finding": "Sender and Reply-To domains differ",
+          "severity": "Medium",
+          "points_added": 25,
+          "explanation": "Sender: ['example.test']; Reply-To: ['unrelated.test']",
+          "source": "header_analysis"
+        },
+        {
+          "finding": "High-risk subject wording",
+          "severity": "Low",
+          "points_added": 10,
+          "explanation": "Subject contains risk-related wording: urgent. This is a heuristic signal, not proof of phishing.",
+          "source": "header_analysis"
+        }
+      ],
+      "outcome": "FLAGGED_EXPECTED_PHISHING"
+    },
+    {
+      "file": "samples/suspicious/sample_urgent_phishing.eml",
+      "expected": "phishing",
+      "predicted": "flagged",
+      "verdict": "Suspicious - further investigation required",
+      "risk_score": 70,
+      "risk_level": "High",
+      "risk_reasons": [
+        {
+          "finding": "Sender and Reply-To domains differ",
+          "severity": "Medium",
+          "points_added": 25,
+          "explanation": "Sender: ['example.org']; Reply-To: ['unrelated.example.net']",
+          "source": "header_analysis"
+        },
+        {
+          "finding": "High-risk subject wording",
+          "severity": "Low",
+          "points_added": 10,
+          "explanation": "Subject contains risk-related wording: urgent, verify your account, immediately. This is a heuristic signal, not proof of phishing.",
+          "source": "header_analysis"
+        },
+        {
+          "finding": "Account-related message contains a link",
+          "severity": "Medium",
+          "points_added": 25,
+          "explanation": "The email body combines account-related wording with a URL. This warrants review but does not prove phishing.",
+          "source": "header_analysis"
+        },
+        {
+          "finding": "Urgency combined with account-related content",
+          "severity": "Low",
+          "points_added": 10,
+          "explanation": "Urgent language appears alongside account-related content or a link. This is a heuristic signal, not proof of phishing.",
+          "source": "header_analysis"
+        }
+      ],
+      "outcome": "FLAGGED_EXPECTED_PHISHING"
+    },
+    {
+      "file": "samples/benign/meeting_reminder.eml",
+      "expected": "benign",
+      "predicted": "not_flagged",
+      "verdict": "No configured indicators detected",
+      "risk_score": 0,
+      "risk_level": "Low",
+      "risk_reasons": [],
+      "outcome": "BENIGN_NOT_FLAGGED"
+    },
+    {
+      "file": "samples/benign/password_policy.eml",
+      "expected": "benign",
+      "predicted": "not_flagged",
+      "verdict": "No configured indicators detected",
+      "risk_score": 10,
+      "risk_level": "Low",
+      "risk_reasons": [
+        {
+          "finding": "Account-related request without a link",
+          "severity": "Low",
+          "points_added": 10,
+          "explanation": "The message discusses an account and requests an action or response. Legitimate messages can do this too.",
+          "source": "header_analysis"
+        }
+      ],
+      "outcome": "BENIGN_NOT_FLAGGED"
+    },
+    {
+      "file": "samples/suspicious/invoice_phishing.eml",
+      "expected": "phishing",
+      "predicted": "flagged",
+      "verdict": "Suspicious - further investigation required",
+      "risk_score": 60,
+      "risk_level": "High",
+      "risk_reasons": [
+        {
+          "finding": "Sender and Reply-To domains differ",
+          "severity": "Medium",
+          "points_added": 25,
+          "explanation": "Sender: ['example.org']; Reply-To: ['unrelated.example.net']",
+          "source": "header_analysis"
+        },
+        {
+          "finding": "High-risk subject wording",
+          "severity": "Low",
+          "points_added": 10,
+          "explanation": "Subject contains risk-related wording: urgent. This is a heuristic signal, not proof of phishing.",
+          "source": "header_analysis"
+        },
+        {
+          "finding": "Account-related message contains a link",
+          "severity": "Medium",
+          "points_added": 25,
+          "explanation": "The email body combines account-related wording with a URL. This warrants review but does not prove phishing.",
+          "source": "header_analysis"
+        }
+      ],
+      "outcome": "FLAGGED_EXPECTED_PHISHING"
+    },
+    {
+      "file": "samples/suspicious/account_alert.eml",
+      "expected": "phishing",
+      "predicted": "flagged",
+      "verdict": "Suspicious - further investigation required",
+      "risk_score": 70,
+      "risk_level": "High",
+      "risk_reasons": [
+        {
+          "finding": "Sender and Reply-To domains differ",
+          "severity": "Medium",
+          "points_added": 25,
+          "explanation": "Sender: ['example.org']; Reply-To: ['unrelated.example.net']",
+          "source": "header_analysis"
+        },
+        {
+          "finding": "High-risk subject wording",
+          "severity": "Low",
+          "points_added": 10,
+          "explanation": "Subject contains risk-related wording: immediately. This is a heuristic signal, not proof of phishing.",
+          "source": "header_analysis"
+        },
+        {
+          "finding": "Account-related message contains a link",
+          "severity": "Medium",
+          "points_added": 25,
+          "explanation": "The email body combines account-related wording with a URL. This warrants review but does not prove phishing.",
+          "source": "header_analysis"
+        },
+        {
+          "finding": "Urgency combined with account-related content",
+          "severity": "Low",
+          "points_added": 10,
+          "explanation": "Urgent language appears alongside account-related content or a link. This is a heuristic signal, not proof of phishing.",
+          "source": "header_analysis"
+        }
+      ],
+      "outcome": "FLAGGED_EXPECTED_PHISHING"
+    }
+  ]
+}

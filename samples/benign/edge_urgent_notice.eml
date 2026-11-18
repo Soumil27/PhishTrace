@@ -1,0 +1,12 @@
+From: security@example.org
+To: analyst@example.org
+Subject: Urgent: scheduled maintenance tonight
+Date: Fri, 30 Oct 2026 09:00:00 +0000
+Message-ID: <edge-benign-urgent@example.org>
+Authentication-Results: mail.example.org; spf=pass; dkim=pass; dmarc=pass
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Urgent notice: scheduled maintenance will begin tonight.
+No action is required. Please use your usual bookmarked company portal
+if you need further information.

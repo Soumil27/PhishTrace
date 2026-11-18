@@ -1,0 +1,22 @@
+﻿PhishTrace - Day 5 Validation Record
+Date: 2026-10-31
+
+Synthetic evaluation:
+- Samples tested: 7
+- Expected phishing flagged: 4
+- Expected benign not flagged: 3
+- Potential false positives: 0
+- Potential false negatives: 0
+- Errors: 0
+
+Application checks:
+- Python syntax check: PASS
+- Unit tests: 5 passed
+- Dashboard launch: PASS
+- Kali-to-Windows host-only connectivity: PASS
+- Email upload and analysis: PASS
+
+Limitations:
+- Evaluation used synthetic samples.
+- VM testing confirmed dashboard access and application workflow, not live phishing detection over a network.
+- AlertMind VMs, files, and configurations were not intentionally modified.

@@ -1,0 +1,21 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.streamlit/secrets.toml
+*.db
+*.sqlite
+*.sqlite3
+.DS_Store
+.vscode/
+.idea/
+
+# Backup and old versions
+*.bak
+*.bak.*
+*_backup.py
+*_before_*.py
+*_day*_backup.py
+*_preserved.py
+*_fix_backup.py

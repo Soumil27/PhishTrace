@@ -1,0 +1,17 @@
+From: security@example.org
+Reply-To: account-check@unrelated.example.net
+To: analyst@example.org
+Subject: URGENT: Verify your account immediately
+Date: Thu, 29 Oct 2026 10:00:00 +0000
+Message-ID: <suspicious-001@example.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+URGENT: Your account will be suspended today.
+
+Verify your account immediately using this synthetic testing link:
+https://login.example.test/verify?case=PT002
+
+Do not ignore this message.
+
+This is a synthetic suspicious email created for PhishTrace testing.

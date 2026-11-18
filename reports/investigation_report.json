@@ -1,0 +1,143 @@
+{
+  "project": "PhishTrace",
+  "generated_at": "2026-10-30T18:19:22.825951+00:00",
+  "source_file": "evasion_auth_missing.eml",
+  "email_details": {
+    "file": "evasion_auth_missing.eml",
+    "from": [
+      {
+        "name": "",
+        "email": "account-team@unrelated.example.net"
+      }
+    ],
+    "to": [
+      {
+        "name": "",
+        "email": "analyst@example.org"
+      }
+    ],
+    "cc": [],
+    "reply_to": [],
+    "return_path": "",
+    "subject": "Account document available",
+    "date": "2026-10-30T10:10:00+00:00",
+    "message_id": "",
+    "received_headers": [],
+    "authentication_results": [],
+    "all_headers": [
+      {
+        "name": "From",
+        "value": "account-team@unrelated.example.net"
+      },
+      {
+        "name": "To",
+        "value": "analyst@example.org"
+      },
+      {
+        "name": "Subject",
+        "value": "Account document available"
+      },
+      {
+        "name": "Date",
+        "value": "Fri, 30 Oct 2026 10:10:00 +0000"
+      },
+      {
+        "name": "MIME-Version",
+        "value": "1.0"
+      },
+      {
+        "name": "Content-Type",
+        "value": "text/plain; charset=\"utf-8\""
+      }
+    ]
+  },
+  "header_analysis": {
+    "finding_count": 2,
+    "findings": [
+      {
+        "indicator": "No Received headers",
+        "severity": "informational",
+        "detail": "No mail-server routing history is present in this file."
+      },
+      {
+        "indicator": "No Authentication-Results header",
+        "severity": "informational",
+        "detail": "SPF/DKIM/DMARC results cannot be established from this header alone."
+      }
+    ],
+    "verdict": "Needs investigation",
+    "disclaimer": "Indicators are not proof of maliciousness; investigate with additional evidence."
+  },
+  "ioc_analysis": {
+    "source_file": "evasion_auth_missing.eml",
+    "urls": [
+      "https://login.example.test/document?case=EV003"
+    ],
+    "domains": [
+      "login.example.test"
+    ],
+    "url_count": 1,
+    "domain_count": 1,
+    "note": "Extracted indicators are not automatically malicious."
+  },
+  "authentication_analysis": {
+    "authentication": {
+      "SPF": {
+        "status": "UNKNOWN",
+        "evidence": "No Authentication-Results evidence found."
+      },
+      "DKIM": {
+        "status": "UNKNOWN",
+        "evidence": "No Authentication-Results evidence found."
+      },
+      "DMARC": {
+        "status": "UNKNOWN",
+        "evidence": "No Authentication-Results evidence found."
+      }
+    },
+    "note": "These results are parsed from supplied headers; header text alone does not establish that the headers are trustworthy."
+  },
+  "reputation_analysis": {
+    "url_results": [
+      {
+        "indicator": "https://login.example.test/document?case=EV003",
+        "type": "url",
+        "status": "UNKNOWN",
+        "reason": "No existing VirusTotal record was found."
+      }
+    ],
+    "domain_results": [
+      {
+        "indicator": "login.example.test",
+        "type": "domain",
+        "status": "UNKNOWN",
+        "reason": "Reserved .test domain used for testing; external lookup skipped."
+      }
+    ],
+    "note": "Reputation lookups use existing VirusTotal reports only. UNKNOWN means no usable verdict was obtained; it does not mean the indicator is safe."
+  },
+  "overall_assessment": {
+    "verdict": "Suspicious - further investigation required",
+    "risk_score": 25,
+    "risk_level": "Medium",
+    "risk_reasons": [
+      {
+        "finding": "Account-related message contains a link",
+        "severity": "Medium",
+        "points_added": 25,
+        "explanation": "The email body combines account-related wording with a URL. This warrants review but does not prove phishing.",
+        "source": "header_analysis"
+      }
+    ],
+    "concerning_header_indicators": 1,
+    "url_count": 1,
+    "domain_count": 1,
+    "limitations": [
+      "This assessment is a triage aid, not proof of maliciousness.",
+      "Authentication results are parsed from supplied headers and are not independently verified.",
+      "URL extraction does not establish URL reputation.",
+      "Recipient impact cannot be established from an email file alone.",
+      "VirusTotal results depend on existing records and API availability."
+    ]
+  }
+}

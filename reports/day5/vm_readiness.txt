@@ -1,0 +1,15 @@
+﻿PhishTrace Day 5 — VM Readiness
+Date: 2026-10-31 16:21
+Baseline evaluation preserved: True
+
+VM configuration files found:
+C:\VM ware\Ubuntu 64-bit.vmx
+C:\VM ware\Ubuntu 64-bit.vmxf
+C:\VM ware\kali-linux-2025.4-vmware-amd64.vmwarevm\kali-linux-2025.4-vmware-amd64.vmx
+C:\VM ware\kali-linux-2025.4-vmware-amd64.vmwarevm\kali-linux-2025.4-vmware-amd64.vmxf
+C:\VM ware\metasploitable-linux-2.0.0\Metasploitable2-Linux\Metasploitable.vmx
+C:\VM ware\metasploitable-linux-2.0.0\Metasploitable2-Linux\Metasploitable.vmxf
+C:\VM ware\Windows Server 2019\Windows Server 2019.vmx
+C:\VM ware\Windows Server 2019\Windows Server 2019.vmxf
+C:\Users\verma\Documents\Virtual Machines\MS-2\MS-2.vmx
+C:\Users\verma\Documents\Virtual Machines\MS-2\MS-2.vmxf

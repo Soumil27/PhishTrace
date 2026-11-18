@@ -1,0 +1,7 @@
+﻿PhishTrace Day 5 Application Validation
+Date: 2026-10-31
+Synthetic baseline: 7 samples; 4 phishing flagged; 3 benign not flagged; 0 potential false positives; 0 potential false negatives; 0 errors.
+Python compile check: PASS
+Pytest exit code: 1
+Scope: Local application and synthetic samples only. No VM was started or modified.
+Limitation: Synthetic results do not establish real-world detection performance.

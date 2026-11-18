@@ -1,0 +1,87 @@
+{
+  "summary": {
+    "samples_tested": 11,
+    "correct": 11,
+    "false_positives": 0,
+    "false_negatives": 0
+  },
+  "results": [
+    {
+      "file": "samples/benign/sample_benign.eml",
+      "expected": "benign",
+      "predicted": "benign",
+      "outcome": "CORRECT",
+      "score": 0
+    },
+    {
+      "file": "samples/benign/meeting_reminder.eml",
+      "expected": "benign",
+      "predicted": "benign",
+      "outcome": "CORRECT",
+      "score": 0
+    },
+    {
+      "file": "samples/benign/password_policy.eml",
+      "expected": "benign",
+      "predicted": "benign",
+      "outcome": "CORRECT",
+      "score": 0
+    },
+    {
+      "file": "samples/benign/edge_urgent_notice.eml",
+      "expected": "benign",
+      "predicted": "benign",
+      "outcome": "CORRECT",
+      "score": 10
+    },
+    {
+      "file": "samples/benign/edge_password_reminder.eml",
+      "expected": "benign",
+      "predicted": "benign",
+      "outcome": "CORRECT",
+      "score": 0
+    },
+    {
+      "file": "samples/suspicious/sample_phishing.eml",
+      "expected": "phishing",
+      "predicted": "phishing",
+      "outcome": "CORRECT",
+      "score": 35
+    },
+    {
+      "file": "samples/suspicious/sample_urgent_phishing.eml",
+      "expected": "phishing",
+      "predicted": "phishing",
+      "outcome": "CORRECT",
+      "score": 35
+    },
+    {
+      "file": "samples/suspicious/invoice_phishing.eml",
+      "expected": "phishing",
+      "predicted": "phishing",
+      "outcome": "CORRECT",
+      "score": 35
+    },
+    {
+      "file": "samples/suspicious/account_alert.eml",
+      "expected": "phishing",
+      "predicted": "phishing",
+      "outcome": "CORRECT",
+      "score": 35
+    },
+    {
+      "file": "samples/suspicious/edge_quiet_phishing.eml",
+      "expected": "phishing",
+      "predicted": "phishing",
+      "outcome": "CORRECT",
+      "score": 25
+    },
+    {
+      "file": "samples/suspicious/edge_credential_request.eml",
+      "expected": "phishing",
+      "predicted": "phishing",
+      "outcome": "CORRECT",
+      "score": 25
+    }
+  ]
+}

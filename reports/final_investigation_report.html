@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhishTrace Investigation Report</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:1000px;margin:32px auto;padding:0 20px;color:#172033}
+h1{color:#123763}h2{margin-top:28px;color:#174b7a}
+table{border-collapse:collapse;width:100%;margin:12px 0 24px;table-layout:fixed}
+th,td{border:1px solid #ccd5df;padding:9px;text-align:left;overflow-wrap:anywhere}
+th{background:#173b64;color:white}tr:nth-child(even){background:#f1f5f9}
+.note{background:#fff7df;padding:12px;border-left:4px solid #d69b20}
+@media print{body{margin:0;max-width:none}}
+</style></head><body>
+<h1>PhishTrace</h1><p>Email Phishing Investigation Report</p>
+<p>Generated in PhishTrace. This report supports initial triage.</p>
+<h2>1. Executive Summary</h2><table><tr><th>Source file</th><td>sample_phishing.eml</td></tr><tr><th>Verdict</th><td>Suspicious - further investigation required</td></tr><tr><th>Risk score</th><td>40/100</td></tr><tr><th>Risk level</th><td>Medium</td></tr><tr><th>URLs extracted</th><td>1</td></tr><tr><th>Domains extracted</th><td>1</td></tr></table>
+<h2>2. Explainable Risk Reasons</h2>
+<table><tr><th>Finding</th><th>Severity / Points</th><th>Explanation</th></tr><tr><td>Sender and Reply-To domains differ</td><td>Medium / 20</td><td>Sender: [&#x27;example.test&#x27;]; Reply-To: [&#x27;unrelated.test&#x27;]</td></tr><tr><td>High-risk subject wording</td><td>Medium / 20</td><td>Subject contains risk-related wording: urgent. This is a heuristic signal, not proof of phishing.</td></tr></table>
+<h2>3. Email Header Findings</h2>
+<table><tr><th>Indicator</th><th>Severity</th><th>Details</th></tr><tr><td>Sender and Reply-To domains differ</td><td>medium</td><td>Sender: [&#x27;example.test&#x27;]; Reply-To: [&#x27;unrelated.test&#x27;]</td></tr><tr><td>No Received headers</td><td>informational</td><td>No mail-server routing history is present in this file.</td></tr><tr><td>No Authentication-Results header</td><td>informational</td><td>SPF/DKIM/DMARC results cannot be established from this header alone.</td></tr></table>
+<h2>4. Extracted Indicators</h2>
+<table><tr><th>Type</th><th>Value</th></tr><tr><td>URL</td><td>https://login.example.test/verify?case=PT001s</td></tr><tr><td>Domain</td><td>login.example.test</td></tr></table>
+<h2>5. Authentication Evidence</h2>
+<table><tr><th>Mechanism</th><th>Status</th><th>Evidence</th></tr><tr><td>authentication</td><td>UNKNOWN</td><td></td></tr><tr><td>note</td><td>These results are parsed from supplied headers; header text alone does not establish that the headers are trustworthy.</td><td></td></tr></table>
+<h2>6. Reputation Results</h2>
+<table><tr><th>Type</th><th>Indicator</th><th>Status</th><th>Reason</th></tr><tr><td>url</td><td>https://login.example.test/verify?case=PT001s</td><td>UNKNOWN</td><td>No existing VirusTotal record was found.</td></tr><tr><td>domain</td><td>login.example.test</td><td>UNKNOWN</td><td>Reserved .test domain used for testing; external lookup skipped.</td></tr></table>
+<p class="note">Risk scoring is heuristic, not a calibrated probability. UNKNOWN or missing evidence does not mean safe. Authentication headers are interpreted as supplied and are not independently verified by this report. PhishTrace does not visit extracted URLs to generate this report.</p>
+</body></html>
